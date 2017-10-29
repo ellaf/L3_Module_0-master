@@ -6,6 +6,8 @@ import java.util.Stack;
 import javax.swing.JOptionPane;
 
 public class IntroToStack {
+	
+
 
 	public static void main(String[] args) {
 		// 1. Create a Stack of Doubles
@@ -22,6 +24,7 @@ public class IntroToStack {
 			stack.push(random.nextDouble() * 100);
 
 		}
+
 
 		// 3. Ask the user to enter in two numbers between 0 and 100, inclusive.
 
@@ -46,16 +49,14 @@ public class IntroToStack {
 		// between the two numbers entered by the user, print it to the screen.
 
 		for (int i = 0; i < 100; i++) {
-			// stack.pop();
-
 			Double popped = stack.pop();
+		
 			if (numberOneInt > numberTwoInt && popped > numberTwoInt && popped < numberOneInt) {
-				String poppedList = popped + "";
+				
+				System.out.println(popped);
 
-				System.out.println("Number One: " + numberOneInt + "\n" + "Number Two: " + numberTwoInt + "\n" + "\n"
-						+ "Elements between " + numberOneInt + " and " + numberTwoInt + ":");
-				System.out.println(poppedList);
-
+				System.out.println();
+				
 			} else if (numberOneInt < numberTwoInt && popped < numberTwoInt && popped > numberOneInt) {
 
 				System.out.println(popped);
