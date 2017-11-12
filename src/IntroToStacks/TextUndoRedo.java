@@ -67,9 +67,10 @@ public class TextUndoRedo implements KeyListener {
 
 		}else if(e.getKeyCode() == KeyEvent.VK_SHIFT){
 		
-		System.out.println(orangeString);
-		orange.push(deleted.pop());
-		
+		//System.out.println(orangeString);
+		if(!deleted.isEmpty()) {
+			orange.push(deleted.pop());
+		}
 		label.setText(orangeString);
 		}
 		else {
